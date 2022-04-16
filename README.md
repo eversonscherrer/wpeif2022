@@ -6,12 +6,6 @@ This is a repository that contains the experiment that was submitted in the pape
 Basic Linux/Unix knowledge
 Service provider networking knowledge
 
-# Overview
-
-FreeRouter is a free, open source router control plane software, freeRouter besides Ethernet, is able to handle HDLC, X25, frame-relay, ATM encapsulation. Since it handles packets itself at the socket layer, it is independent of underlying Operation System capabilities. The command line tries to mimic the industry standards with one exception:
-
-In order to be able to start a topology with PolKa. 
-
 # Article objective
 This article exposes how to install freerouter and execute a core topology with Segment Routing.
 
@@ -20,10 +14,6 @@ This article exposes how to install freerouter and execute a core topology with 
   - Ubuntu 18.04 (Bionic beaver)
   - Ubuntu 20.04 (Focal fossa)
 
-# Diagram
-
- Overview
-This repository has all the files needed to run the topology and which was put as an example in the article "FreeRouter in a Nutshell: A "Protocoland'' routing platform for Open and Portable Carrier-Class Testbeds" sent to WTESTBEDS - 1st Testbeds Workshop.
 
 # Freertr
 Freertr is a control plane: Router OS process speaks various network protocols, (re)encap packets, and exports forwarding tables to hardware switches. Basically, it is only necessary to install the Java Runtime Environment (JRE). Below is demonstrated how to install it on operating systems: Linux, Windows and macOS.
