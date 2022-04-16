@@ -68,7 +68,7 @@ interface tunnel1
  exit
 !
 interface tunnel2
- description POLKA tunnel longuest ipv4 from R5 -> R6
+ description POLKA tunnel longest ipv4 from R5 -> R6
  tunnel vrf v1
  tunnel source loopback0
  tunnel destination 20.20.20.7
@@ -94,7 +94,7 @@ interface tunnel3
  exit
 !
 interface tunnel4
- description POLKA tunnel longues ipv6 from R5 -> R6
+ description POLKA tunnel longest ipv6 from R5 -> R6
  tunnel vrf v1
  tunnel source loopback0
  tunnel destination 2020::7
