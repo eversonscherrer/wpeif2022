@@ -1,7 +1,7 @@
 #!/bin/bash
 
-RTR=/Users/everson/Dropbox/rtr/rtr.jar
-HWSW=/Users/everson/Dropbox/rtr/everson/wpeif2022/polka-ospf/
+RTR=<freertr path>rtr.jar
+HWSW=<Software and Hardware files>/
 
 tmux new-session -d -s rare 'java -jar '$RTR' routersc '$HWSW'r1-hw.txt '$HWSW'r1-sw.txt'
 tmux split-window -v -t 0 -p 50
