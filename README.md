@@ -1,4 +1,4 @@
-# wpeif2022
+# WPEIF-2022
 This is a repository that contains the experiment that was submitted in the paper to XIII Workshop on Experimental Research on the Internet of the Future.
 
 # Paper Title
@@ -63,3 +63,5 @@ brew install tmux
 ![PolKA](https://user-images.githubusercontent.com/56919528/163656929-62c592f7-07c6-41e1-9ddb-90998d865b7f.jpeg)
 
 
+# Diagram
+![Diagram](/Users/everson/wpeif2022/topology.png)
