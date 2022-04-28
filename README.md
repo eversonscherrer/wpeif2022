@@ -60,3 +60,4 @@ brew install tmux
 ````
 
 # Diagram
+[Diagram](https://github.com/eversonscherrer/wpeif2022/blob/main/topology.png)
