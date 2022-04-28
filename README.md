@@ -1,5 +1,8 @@
 # wpeif2022
-This is a repository that contains the experiment that was submitted in the paper to XIII Workshop on Experimental Research on the Internet of the Future
+This is a repository that contains the experiment that was submitted in the paper to XIII Workshop on Experimental Research on the Internet of the Future.
+
+# Paper Title
+A lifecycle experience of PolKA: From prototyping to deployment at Géant Lab with RARE/FreeRouter
 
 # Requirement
 
@@ -58,3 +61,5 @@ brew install tmux
 
 # PolKA Topology
 ![PolKA](https://user-images.githubusercontent.com/56919528/163656929-62c592f7-07c6-41e1-9ddb-90998d865b7f.jpeg)
+
+
