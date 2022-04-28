@@ -88,7 +88,7 @@ telnet 127.0.0.1 2525
 R5#show running-config tunnel1
 ```
 
-Tunnel 1
+
 ![Tunnel 1](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/tunnel1.png)
 
 
