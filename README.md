@@ -2,6 +2,7 @@
 This is a repository that contains the experiment that was submitted in the paper to XIII Workshop on Experimental Research on the Internet of the Future.
 
 # Paper Title
+
 A lifecycle experience of PolKA: From prototyping to deployment at Géant Lab with RARE/FreeRouter
 
 # Requirement
@@ -58,6 +59,8 @@ sudo apte-get install tmux
 or
 brew install tmux
 ````
+There is a file called ```start-topology``` in the repository. This file orchestrates the execution of all routers in a single run.
+
 
 # Diagram
 ![Diagram](https://github.com/eversonscherrer/wpeif2022/blob/main/topology.png)
