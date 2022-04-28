@@ -13,7 +13,7 @@ Service provider networking knowledge
 # Diagram
 The paper used this diagram to describe a PolKA demo scenario.
 
-![Diagram](https://github.com/eversonscherrer/wpeif2022/blob/main/topology.png)
+![Diagram](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/topology.png)
 
 # Operating system supported
 This point exposes how to install freerouter and execute a edge-core topology with PolKA.
@@ -85,9 +85,11 @@ telnet 127.0.0.1 2525
 2 - Check running-config for tunnel1 polka.
 
 ```console
-
+R5#show running-config tunnel1
 ```
 
+Tunnel 1
+![Tunnel 1](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/tunnel1.png)
 
 
 
