@@ -10,13 +10,17 @@ A lifecycle experience of PolKA: From prototyping to deployment at Géant Lab wi
 Basic Linux/Unix knowledge
 Service provider networking knowledge
 
-# Article objective
-This article exposes how to install freerouter and execute a core topology with Segment Routing.
+# Diagram
+The paper used this diagram to describe a PolKA demo scenario.
 
-- Operating system supported:
-  - Debian 10 (stable aka buster)
-  - Ubuntu 18.04 (Bionic beaver)
-  - Ubuntu 20.04 (Focal fossa)
+![Diagram](https://github.com/eversonscherrer/wpeif2022/blob/main/topology.png)
+
+# Operating system supported
+This point exposes how to install freerouter and execute a edge-core topology with PolKA.
+
+- Debian 10 (stable aka buster)
+- Ubuntu 18.04 (Bionic beaver)
+- Ubuntu 20.04 (Focal fossa)
 
 
 # Freertr
@@ -45,6 +49,7 @@ In order to install the Windows version of Java, you need to visit the official 
 ## Install Freertr
 The freeRouter homepage is at freertr.net. Starting from this page, you'll find various resources such as source code (there is also a GitHub mirror), binaries, and other images that might be of your interest. From there we just download the freeRouter jar files.
 
+
 ```console
 #wget freertr.net/rtr.jar
 ````
@@ -59,8 +64,37 @@ sudo apte-get install tmux
 or
 brew install tmux
 ````
-There is a file called ```start-topology``` in the repository. This file orchestrates the execution of all routers in a single run.
+There is a file called ```start-topology.sh``` in the repository. This file orchestrates the execution of all routers in a single run.
+
+```console
+#chmod +x start-topology.sh
+#./start-topology.sh
+```
+
+# Verification
+
+1 - To access the router through the network, just access via telnet or ssh, in our demo, we use telnet.
+
+```telnet <localhost> <port>```
+
+For Example, Access Router R5, to access another router, just change the port.
+```console
+telnet 127.0.0.1 2525
+```
+
+2 - Check running-config for tunnel1 polka.
+
+```console
+
+```
 
 
-# Diagram
-![Diagram](https://github.com/eversonscherrer/wpeif2022/blob/main/topology.png)
+
+
+
+
+
+
+
+
+
