@@ -2,7 +2,7 @@
 This is a repository that contains the experiment that was submitted in the paper to XIII Workshop on Experimental Research on the Internet of the Future.
 
 Conference link
-(http://sbrc2022.sbc.org.br/xiii-workshop-de-pesquisa-experimental-da-internet-do-futuro-wpeif-2022/)
+http://sbrc2022.sbc.org.br/xiii-workshop-de-pesquisa-experimental-da-internet-do-futuro-wpeif-2022/
 
 # Paper Title
 
@@ -74,7 +74,7 @@ There is a file called ```start-topology.sh``` in the repository. This file orch
 #./start-topology.sh
 ```
 
-# Verification
+# PolKA Experimentation
 
 ## 1 - To access the router, just access via telnet or ssh, in our demo, we use telnet.
 
