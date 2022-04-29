@@ -82,22 +82,24 @@ For Example, Access Router R5, to access another router, just change the port.
 telnet 127.0.0.1 2525
 ```
 
-2 - Check running-config for tunnel1 polka.
+2 - Check running-config for PolKA tunnel1.
 
 ```console
-R5#show running-config tunnel1
+R5#show running-config interface tunnel1
 ```
 
 ![Tunnel 1](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/tunnel1.png)
 
 
-3 - Check running-config for tunnel1 polka.
+3 - Check running-config for PolKA tunnel4.
 
 ```console
-R5#show running-config tunnel1
+R5#show running-config interface tunnel4
 ```
 
 ![Tunnel 4](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/tunnel4.png)
+
+
 
 
 
