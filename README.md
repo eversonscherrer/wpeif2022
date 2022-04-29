@@ -205,9 +205,14 @@ index  coeff     poly   crc    equal
 
 In our experiment we use a PBR to make traffic engineering (TE), in this example we demonstrate a shortest path with an ipv4 tunnel and a longest path with ipv6 tunnel. We show a traffic in green sent between edge router R5, passing through core routers R1 and R2, to reach at edge router R6 over PolKA tunnel 1.
 
-![Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/polka-tunnel-shortest-path.png)
+| ![Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/polka-tunnel-shortest-path.png)|
+|:--:| 
+| *Shortest* |
 
-To see the access list that classifies the traffic, just run the command below. In our example, we categorize ICMP protocol. For this we create two ```access-list``` named polka4 and polka6.
+
+![Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/polka-tunnel-longest-path.png)
+
+To see the access list that classifies the traffic, just run the command below. In our example, we categorize ICMP protocol. For this we create two ```access-list``` one for ipv4 named polka4 and another to ipv6 named polka6.
 
 #### polka4
 ```console
