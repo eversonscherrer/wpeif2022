@@ -73,7 +73,7 @@ There is a file called ```start-topology.sh``` in the repository. This file orch
 
 # Verification
 
-1 - To access the router, just access via telnet or ssh, in our demo, we use telnet.
+## 1 - To access the router, just access via telnet or ssh, in our demo, we use telnet.
 
 ```telnet <localhost> <port>```
 
@@ -82,19 +82,33 @@ For Example, Access Router R5, to access another router, just change the port.
 telnet 127.0.0.1 2525
 ```
 
-2 - Check running-config for PolKA tunnel1.
+## 2 - Check running-config for PolKA tunnel1.
 
 ```console
-R5#show running-config interface tunnel1
+show running-config interface tunnel1
 ```
 
-![Tunnel 1](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/tunnel1.png)
-
+````
+R5#show running-config interface tunnel1
+interface tunnel1
+ description POLKA tunnel shortest ipv4 from R5 -> R6
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 20.20.20.6
+ tunnel domain-name 20.20.20.1 20.20.20.2
+ tunnel mode polka
+ vrf forwarding v1
+ ipv4 address 30.30.30.1 255.255.255.252
+ no shutdown
+ no log-link-change
+ exit
+!
+````
 
 3 - Check running-config for PolKA tunnel4.
 
 ```console
-R5#show running-config interface tunnel4
+show running-config interface tunnel4
 ```
 ````
 R5#show running-config interface tunnel4
@@ -116,7 +130,7 @@ interface tunnel4
 
 4 - Check if the tunnels it's work, just use the command. If the tunnels and interfaces is working, after insert the command you see "up".
 ```console
-R5#show interface summary
+show interface summary
 ```
 
 ```
@@ -135,7 +149,7 @@ tunnel4    up     407684   0       230
 5 - Check the routeID and parameters from PolKA
 
 ```console
-R5#show polka routeid 
+show polka routeid tunnel1
 ```
 
 ```
