@@ -1,6 +1,9 @@
 # WPEIF-2022
 This is a repository that contains the experiment that was submitted in the paper to XIII Workshop on Experimental Research on the Internet of the Future.
 
+Conference link
+(http://sbrc2022.sbc.org.br/xiii-workshop-de-pesquisa-experimental-da-internet-do-futuro-wpeif-2022/)
+
 # Paper Title
 
 A lifecycle experience of PolKA: From prototyping to deployment at Géant Lab with RARE/FreeRouter
@@ -10,10 +13,10 @@ A lifecycle experience of PolKA: From prototyping to deployment at Géant Lab wi
 Basic Linux/Unix knowledge
 Service provider networking knowledge
 
-# Diagram
+# Topology
 The paper used this diagram to describe a PolKA demo scenario.
 
-![Diagram](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/topology.png)
+![Topology](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/topology.png)
 
 # Operating system supported
 This point exposes how to install freerouter and execute a edge-core topology with PolKA.
@@ -77,7 +80,7 @@ There is a file called ```start-topology.sh``` in the repository. This file orch
 
 ```telnet <localhost> <port>```
 
-For Example, Access Router R5, to access another router, just change the port.
+For example, Access Router R5, to access another router, just change the port.
 ```console
 telnet 127.0.0.1 2525
 ```
@@ -128,7 +131,7 @@ interface tunnel4
 ````
 
 
-## 4 - Check if the tunnels it's work, just use the command. If the tunnels and interfaces is working, after insert the command you see "up".
+## 4 - Check if the tunnels it's work, just use the command below. If the tunnels and interfaces is working, after insert the command you see "up".
 ```console
 show interface summary
 ```
@@ -197,3 +200,5 @@ index  coeff     poly   crc    equal
 8      0001001d  21719  21719  true
 9      0001002b  64376  64376  true
 ````
+
+
