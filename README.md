@@ -201,4 +201,33 @@ index  coeff     poly   crc    equal
 9      0001002b  64376  64376  true
 ````
 
-aaa
+## 6 - Policy Based Routing (PBR)
+
+In our experiment we use a PBR to make traffic engineering (TE), in this example we demonstrate a shortest path with an ipv4 tunnel and a longest path with ipv6 tunnel. We show a traffic in green sent between edge router R5, passing through core routers R1 and R2, to reach at edge router R6 over PolKA tunnel 1.
+
+![Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/polka-tunnel-shortest-path.png)
+
+To see the access list that classifies the traffic, just run the command below. In our example, we categorize ICMP protocol. For this we create two ```access-list``` named polka4 and polka6.
+
+#### polka4
+```console
+show access-list polka4
+```
+
+```
+R5#show access-list polka4
+ sequence 10 permit 1 7.7.7.0 255.255.255.252 all 20.20.20.6 255.255.255.255 all
+  match=tx=0(0) rx=0(0) drp=0(0) accessed=never ago, 00:00:00 timeout
+```
+
+#### polka6
+
+```console
+show access-list polka6
+```
+
+```
+R5#show access-list polka6
+ sequence 10 permit 58 7777:: ffff:ffff:ffff:ffff:: all 2020::6 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff all
+  match=tx=0(0) rx=344256(0) drp=0(0) accessed=21:26:33 ago, 00:00:00 timeout
+```
