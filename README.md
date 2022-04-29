@@ -105,7 +105,7 @@ interface tunnel1
 !
 ````
 
-3 - Check running-config for PolKA tunnel4.
+## 3 - Check running-config for PolKA tunnel4.
 
 ```console
 show running-config interface tunnel4
@@ -128,7 +128,7 @@ interface tunnel4
 ````
 
 
-4 - Check if the tunnels it's work, just use the command. If the tunnels and interfaces is working, after insert the command you see "up".
+## 4 - Check if the tunnels it's work, just use the command. If the tunnels and interfaces is working, after insert the command you see "up".
 ```console
 show interface summary
 ```
@@ -146,7 +146,9 @@ tunnel3    up     26910    0       0
 tunnel4    up     407684   0       230
 ```
 
-5 - Check the routeID and parameters from PolKA
+## 5 - Check the routeID and parameters from PolKA Tunnels 1 and 4. In this point its intersting to notice that 
+
+Details from Tunnel 1
 
 ```console
 show polka routeid tunnel1
@@ -171,4 +173,27 @@ index  coeff     poly   crc    equal
 9      0001002b  8069   8069   true
 ```
 
+Details from Tunnel 4
 
+```console
+show polka routeid tunnel4
+```
+
+````
+R5#show polka routeid tunnel4
+mode  routeid
+hex   00 00 00 00 00 00 69 76 5d c5 d7 be 75 93 96 9a
+poly  1101001011101100101110111000101110101111011111001110101100100111001011010011010
+
+index  coeff     poly   crc    equal
+0      00010000  38554  38554  true
+1      00010001  4      4      true
+2      00010003  6      6      true
+3      00010005  2      2      true
+4      00010009  3      3      true
+5      0001000f  3401   3401   true
+6      00010011  0      0      true
+7      0001001b  25646  25646  true
+8      0001001d  21719  21719  true
+9      0001002b  64376  64376  true
+````
