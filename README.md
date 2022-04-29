@@ -203,14 +203,17 @@ index  coeff     poly   crc    equal
 
 ## 6 - Policy Based Routing (PBR)
 
-In our experiment we use a PBR to make traffic engineering (TE), in this example we demonstrate a shortest path with an ipv4 tunnel and a longest path with ipv6 tunnel. We show a traffic in green sent between edge router R5, passing through core routers R1 and R2, to reach at edge router R6 over PolKA tunnel 1.
+We use a PBR to make traffic engineering (TE) in our experiment. This example demonstrates the shortest path with a PolKA tunnel ipv4. The ICMP packets were left from R7 and forwarded to R5, categorized with an access-list named polka4. After that, with a PBR that can be the next hope sent between edge router R5, in this case passing through core routers R1 and R2 to reach at edge router R6 over PolKA tunnel 1.
 
 | ![Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/polka-tunnel-shortest-path.png)|
 |:--:| 
-| *Shortest* |
+| *Shortest Path* |
 
+In the longest path, the ICMP packets left from R7 and forwarded to R5, categorized with an access-list named polka6. After that, a PBR forward to the next hope sent between edge router R5, passing through core routers R1, R4, R3, and R2 to reach edge router R6 over PolKA tunnel 4.
 
-![Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/polka-tunnel-longest-path.png)
+|![Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/polka-tunnel-longest-path.png)|
+|:--:| 
+| *Longest Path* |
 
 To see the access list that classifies the traffic, just run the command below. In our example, we categorize ICMP protocol. For this we create two ```access-list``` one for ipv4 named polka4 and another to ipv6 named polka6.
 
