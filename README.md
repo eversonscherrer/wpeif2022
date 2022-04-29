@@ -73,7 +73,7 @@ There is a file called ```start-topology.sh``` in the repository. This file orch
 
 # Verification
 
-1 - To access the router through the network, just access via telnet or ssh, in our demo, we use telnet.
+1 - To access the router, just access via telnet or ssh, in our demo, we use telnet.
 
 ```telnet <localhost> <port>```
 
@@ -96,14 +96,65 @@ R5#show running-config interface tunnel1
 ```console
 R5#show running-config interface tunnel4
 ```
+````
+R5#show running-config interface tunnel4
+interface tunnel4
+ description POLKA tunnel longues ipv6 from R5 -> R6
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 2020::6
+ tunnel domain-name 2020::1 2020::4 2020::3 2020::2
+ tunnel mode polka
+ vrf forwarding v1
+ ipv6 address 4040::1 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+````
 
-![Tunnel 4](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/tunnel4.png)
 
+4 - Check if the tunnels it's work, just use the command. If the tunnels and interfaces is working, after insert the command you see "up".
+```console
+R5#show interface summary
+```
 
+```
+R5#show interfaces summary
+interface  state  tx       rx      drop
+template1  admin  667      0       64014
+loopback0  up     286756   0       0
+ethernet1  up     1035022  951379  0
+ethernet2  up     652494   456591  0
+tunnel1    up     0        0       0
+tunnel2    up     0        0       0
+tunnel3    up     26910    0       0
+tunnel4    up     407684   0       230
+```
 
+5 - Check the routeID and parameters from PolKA
 
+```console
+R5#show polka routeid 
+```
 
+```
+R5#show polka routeid tunnel1
+mode  routeid
+hex   00 00 00 00 00 00 00 00 00 00 26 d9 4d b0 6b 6b
+poly  1001101101100101001101101100000110101101101011
 
-
+index  coeff     poly   crc    equal
+0      00010000  27499  27499  true
+1      00010001  2      2      true
+2      00010003  6      6      true
+3      00010005  23389  23389  true
+4      00010009  56209  56209  true
+5      0001000f  33006  33006  true
+6      00010011  0      0      true
+7      0001001b  55909  55909  true
+8      0001001d  33248  33248  true
+9      0001002b  8069   8069   true
+```
 
 
