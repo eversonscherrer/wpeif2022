@@ -33,7 +33,7 @@ Freertr is a control plane: Router OS process speaks various network protocols, 
 ### Linux
 For demonstration purposes, the Debian-based Linux installation was chosen.
 ```console
-#sudo apt-get install default-jre-headless --no-install-recommends
+sudo apt-get install default-jre-headless --no-install-recommends
 ```
 
 ### MacOS
@@ -54,7 +54,7 @@ The freeRouter homepage is at freertr.net. Starting from this page, you'll find 
 
 
 ```console
-#wget freertr.net/rtr.jar
+sudo wget freertr.net/rtr.jar
 ````
 
 # Launch the Topology
@@ -70,8 +70,8 @@ brew install tmux
 There is a file called ```start-topology.sh``` in the repository. This file orchestrates the execution of all routers in a single run.
 
 ```console
-#chmod +x start-topology.sh
-#./start-topology.sh
+sudo chmod +x start-topology.sh
+./start-topology.sh
 ```
 
 # PolKA Experimentation
