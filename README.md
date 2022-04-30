@@ -288,7 +288,8 @@ ping 20.20.20.6 /vrf v1 /repeat 111111
 ### - Ping test using a longest path with PolKA tunnel 4
 
 Here we demonstrate a ICMP traffic from R7 to R6, by PolKA tunnel4 in R5.
-Notice that the traffic left R7. It's classified in R5 and forwarded through the R1 --> R4 --> R3 -->R2 until it arrives at R6. 
+Notice that the traffic left R7. It's classified in R5 and forwarded through the R1 --> R4 --> R3 -->R2 until it arrives at by R6. 
+
 ```console
 ping 2020::6 /vrf v1 /repeat 111111
 ```
