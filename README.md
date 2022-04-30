@@ -271,8 +271,23 @@ Note that this PBR forwards all ICMP ipv6 traffic coming from R7 to the PolKA tu
 
 #### Ping test using a shortest path with PolKA tunnel 1
 
-As we starting the traffic 
+As explained, we started the traffic from R7, now run the commands in R7.  
 
+Here we demonstrate a ICMP traffic from R7 to R6, by PolKA tunnel1 in R5.
 ```console
-show ipv6 pbr v1
+ping 20.20.20.6 /vrf v1 /repeat 111111
 ```
+
+|![Ping Shortest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/pbr-ipv4.png)|
+|:--:| 
+| *Ping Shortest Path* |
+
+
+Here we demonstrate a ICMP traffic from R7 to R6, by PolKA tunnel4 in R5.
+```console
+ping 2020::6 /vrf v1 /repeat 111111
+```
+
+|![Ping Longest Path](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/pbr-ipv6.png)|
+|:--:| 
+| *Ping Longest Path* |
