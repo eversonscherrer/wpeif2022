@@ -217,7 +217,7 @@ In the longest path, the ICMP packets left from R7 and forwarded to R5, categori
 
 To see the access list that classifies the traffic, just run the command below. In our example, we categorize ICMP protocol. For this we create two ```access-list``` one for ipv4 named polka4 and another to ipv6 named polka6.
 
-#### polka4
+#### Access-List polka4
 ```console
 show access-list polka4
 ```
@@ -225,10 +225,10 @@ show access-list polka4
 ```
 R5#show access-list polka4
  sequence 10 permit 1 7.7.7.0 255.255.255.252 all 20.20.20.6 255.255.255.255 all
-  match=tx=0(0) rx=0(0) drp=0(0) accessed=never ago, 00:00:00 timeout
+  match=tx=0(0) rx=0(0) drp=0(0) accessed=21:26:33 ago, 00:00:00 timeout
 ```
 
-#### polka6
+#### Access-List polka6
 
 ```console
 show access-list polka6
@@ -237,5 +237,42 @@ show access-list polka6
 ```
 R5#show access-list polka6
  sequence 10 permit 58 7777:: ffff:ffff:ffff:ffff:: all 2020::6 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff all
-  match=tx=0(0) rx=344256(0) drp=0(0) accessed=21:26:33 ago, 00:00:00 timeout
+  match=tx=0(0) rx=0(0) drp=0(0) accessed=21:26:33 ago, 00:00:00 timeout
+```
+
+#### To show ipv4 PBR
+
+```console
+show ipv4 pbr v1
+```
+
+````
+R5#show ipv4 pbr v1
+ sequence 10 polka4 v1 nexthop 30.30.30.2
+  match=tx=0(0) rx=0(0) drp=0(0) accessed=never ago, 00:00:00 timeout
+````
+
+Note that this PBR forwards all ICMP ipv4 traffic coming from R7 to the PolKA shortest path tunnel.
+
+#### To show ipv6 PBR
+
+```console
+show ipv6 pbr v1
+```
+````
+R5#show ipv6 pbr v1
+ sequence 10 polka6 v1 nexthop 4040::2
+  match=tx=0(0) rx=344256(5379) drp=0(0) accessed=1d21h ago, 00:00:00 timeout
+````
+
+Note that this PBR forwards all ICMP ipv6 traffic coming from R7 to the PolKA tunnel the longest path.
+
+## 7 - Verification
+
+#### Ping test using a shortest path with PolKA tunnel 1
+
+As we starting the traffic 
+
+```console
+show ipv6 pbr v1
 ```
