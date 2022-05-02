@@ -28,7 +28,9 @@ This point exposes how to install freerouter and execute a edge-core topology wi
 
 # Freertr
 
-<span style="display:block;text-align:center">![freertr](https://github.com/eversonscherrer/wpeif2022/blob/main/Images/freertr.png)
+<p align="center">
+  <img src="https://github.com/eversonscherrer/wpeif2022/blob/main/Images/freertr.png">
+</p>
 
 Freertr is a control plane: Router OS process speaks various network protocols, (re)encap packets, and exports forwarding tables to hardware switches. Basically, it is only necessary to install the Java Runtime Environment (JRE). Below is demonstrated how to install it on operating systems: Linux, Windows and macOS.
 
